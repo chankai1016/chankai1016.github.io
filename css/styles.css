@@ -30,7 +30,7 @@ body {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 60px; /* 高さを確保して中央揃え */
+    height: 100px; /* 高さを確保して中央揃え */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -113,8 +113,8 @@ body {
 }
 
 .hamburger span {
-    width: 30px;
-    height: 3px;
+    width: 35px;
+    height: 2px;
     background: var(--text-color);
     margin: 5px 0;
     transition: 0.3s;
@@ -138,6 +138,8 @@ body {
 
     .nav-links.open {
         left: 0;
+        width: 100%;
+        padding: 30vw 0 0 0;
     }
 
     .hamburger {
@@ -155,7 +157,7 @@ body {
     }
 
     .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(8.5px, 8.5px);
     }
 
     .hamburger.active span:nth-child(2) {
@@ -163,7 +165,7 @@ body {
     }
 
     .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
+        transform: rotate(-45deg) translate(8.5px, -8.5px);
     }
 }
 
