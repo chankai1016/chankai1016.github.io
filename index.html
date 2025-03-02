@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- ナビゲーションバー -->
+    <nav class="navbar">
+        <h2>Portfolio</h2>
+        <ul>
+            <li><a href="#about" data-lang="about">About</a></li>
+            <li><a href="#skills" data-lang="skills">Skills</a></li>
+            <li><a href="#projects" data-lang="projects">Projects</a></li>
+            <li><a href="#contact" data-lang="contact">Contact</a></li>
+            <li>
+                <button id="theme-toggle">🌙</button>
+            </li>
+            <li>
+                <select id="language-select">
+                    <option value="ja">日本語</option>
+                    <option value="zh">繁體中文</option>
+                    <option value="en">English</option>
+                </select>
+            </li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1 data-lang="welcome">Welcome to My Portfolio</h1>
+        <p data-lang="description">Web Developer | Designer | Creator</p>
+        <a href="#about" class="scroll-btn" data-lang="more">More About Me</a>
+    </header>
+
+    <section id="about" class="hidden">
+        <h2 data-lang="about_title">About Me</h2>
+        <p data-lang="about_text">私はクリエイティブなWeb開発者で、モダンなデザインとインタラクティブなUIを作るのが得意です。</p>
+    </section>
+
+    <section id="skills" class="hidden">
+        <h2 data-lang="skills_title">My Skills</h2>
+        <div class="skills-container">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React</div>
+            <div class="skill">Node.js</div>
+        </div>
+    </section>
+
+    <section id="projects" class="hidden">
+        <h2 data-lang="projects_title">Projects</h2>
+        <div class="project-card">
+            <h3 data-lang="project1_title">Portfolio Website</h3>
+            <p data-lang="project1_text">シンプルで洗練されたポートフォリオサイト。</p>
+        </div>
+        <div class="project-card">
+            <h3 data-lang="project2_title">Interactive App</h3>
+            <p data-lang="project2_text">動的なデータを表示するWebアプリ。</p>
+        </div>
+    </section>
+
+    <section id="contact" class="hidden">
+        <h2 data-lang="contact_title">Contact Me</h2>
+        <p>Email: example@gmail.com</p>
+        <p>GitHub: <a href="https://github.com/example" target="_blank">github.com/example</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio</p>
+    </footer>
+
+</body>
+</html>
