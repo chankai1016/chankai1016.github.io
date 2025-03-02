@@ -3,8 +3,8 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: var(--bg-color);
-    color: var(--text-color);
+    background: var(--bg-color, #121212);
+    color: var(--text-color, #fff);
     text-align: center;
     transition: background 0.3s, color 0.3s;
 }
@@ -65,4 +65,15 @@ body {
 
 .scroll-btn:hover {
     transform: scale(1.1);
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
