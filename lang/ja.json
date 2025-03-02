@@ -1,0 +1,19 @@
+{
+    "title": "ポートフォリオ",
+    "welcome": "ポートフォリオへようこそ",
+    "description": "Web開発者 | デザイナー | クリエイター",
+    "more": "詳しく見る",
+    "about": "自己紹介",
+    "about_title": "私について",
+    "about_text": "私はクリエイティブなWeb開発者です。",
+    "skills": "スキル",
+    "skills_title": "スキルセット",
+    "projects": "プロジェクト",
+    "projects_title": "プロジェクト一覧",
+    "project1_title": "ポートフォリオサイト",
+    "project1_text": "シンプルで洗練されたポートフォリオサイト。",
+    "project2_title": "インタラクティブアプリ",
+    "project2_text": "動的なデータを表示するWebアプリ。",
+    "contact": "お問い合わせ",
+    "contact_title": "お問い合わせ"
+}

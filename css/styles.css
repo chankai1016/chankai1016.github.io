@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+/* 🌟 モダンなブルーカラーを採用 */
+:root {
+    --bg-color: #0A192F;  /* 背景色 */
+    --text-color: #ffffff; /* テキスト */
+    --nav-bg: rgba(17, 34, 64, 0.8); /* ナビゲーションバー（透明度 80%） */
+    --accent-color: #3DA9FC; /* モダンなブルー */
+}
+
+.light-mode {
+    --bg-color: #E3F2FD;
+    --text-color: #000;
+    --nav-bg: rgba(144, 202, 249, 0.8);
+    --accent-color: #1565C0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* 🏗 ナビゲーションバー（透明度を設定・高さ確保） */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 60px; /* 高さを確保して中央揃え */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: var(--nav-bg);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* 📌 ナビゲーションメニュー */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav-links a:hover {
+    background: var(--accent-color);
+}
+
+/* 🎭 言語切替セレクトボックス */
+#language-select {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background: var(--text-color);
+    color: var(--bg-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 🌙 ダークモードボタン（SVGアイコンに変更） */
+#theme-toggle {
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* 中央揃え */
+    justify-content: center;
+}
+
+#theme-toggle img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 🛠 ナビゲーションバーの右側アイテム */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    padding-right: 20px;
+    height: 100%; /* ナビバー内での中央揃え */
+}
+
+/* 🍔 ハンバーガーメニュー（中央揃え） */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1100;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* ナビバー内での中央揃え */
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background: var(--text-color);
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* 📱 スマホ向けメニュー */
+@media (max-width: 768px) {
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 75%;
+        height: 100vh;
+        background: var(--nav-bg);
+        padding: 20px;
+        align-items: center;
+        transition: left 0.3s ease-in-out;
+    }
+
+    .nav-links.open {
+        left: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* 📌 スマホではダークモードボタンをハンバーガーメニューの外に */
+    .navbar-right {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%); /* 上下中央揃え */
+        display: flex;
+        align-items: center;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
+/* ヘッダーの上部余白（ナビゲーションバーとの間隔調整） */
+header {
+    padding-top: 100px; /* ← ここで適切な間隔を確保 */
+}
